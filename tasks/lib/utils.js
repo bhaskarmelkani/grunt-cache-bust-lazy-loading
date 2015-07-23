@@ -30,9 +30,15 @@ module.exports = function(opts) {
         },
 
         checkIfElemSrcValidFile: function(element) {
+
+            if(element.attribs['class']&&(element.attribs['class'].indexOf(' lazy') >= 0 )){
+                return this.checkIfValidFile(element.attribs['data-original']);
+            }else{
+
             return this.checkIfValidFile(element.attribs.src) ||
                 this.checkIfValidFile(element.attribs['xlink:href'] ? element.attribs['xlink:href'].split('#')[0] : '') ||
                 this.checkIfValidFile(element.attribs.href);
+                }
         },
 
         regexEscape: function(str) {

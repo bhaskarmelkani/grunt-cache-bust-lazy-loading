@@ -27,9 +27,20 @@ var defaultFilters = {
     'link[rel="stylesheet"]': function() {
         return this.attribs['href'];
     },
+   'div': function() {
+        if(this.attribs['class']&&(this.attribs['class'].indexOf(' lazy') >= 0 )){
+            return this.attribs['data-original'];
+        }else{
+            return false;
+        }
+    },
     'img': [
         function() {
-            return this.attribs['src'];
+            if(this.attribs['class']&&(this.attribs['class'].indexOf(' lazy') >= 0 )){
+                return this.attribs['data-original'];
+            }else{
+                return this.attribs['src'];
+            }
         },
         function() {
             var srcset = this.attribs['srcset'];
@@ -44,6 +55,7 @@ var defaultFilters = {
         }
     ],
     'link[rel="icon"], link[rel="shortcut icon"]': function() {
+
         return this.attribs['href'];
     },
     'script[type="text/template"]': function() {},
