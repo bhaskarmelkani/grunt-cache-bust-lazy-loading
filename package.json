@@ -2,10 +2,7 @@
   "name": "grunt-cache-bust-lazy-loading",
   "description": "Bust static assets from the cache using content hashing. It also supports lazy loading for divs and images when using class lazy. ",
   "version": "0.4.13",
-  "author": {
-    "name": "Bhaskar Melkani",
-    "email": "melkani.bhaskar@gmail.com"
-  },
+  "author": "Bhaskar Melkani <melkani.bhaskar@gmail.com>",
   "repository": {
     "type": "git",
     "url": "https://github.com/bhaskarmelkani/grunt-cache-bust-lazy-loading.git"
@@ -47,5 +44,12 @@
   "homepage": "https://github.com/bhaskarmelkani/grunt-cache-bust-lazy-loading",
   "_npmVersion": "2.5.1",
   "_nodeVersion": "0.12.0",
-  "directories": {}
+  "directories": {
+    "test": "tests"
+  },
+  "bugs": {
+    "url": "https://github.com/bhaskarmelkani/grunt-cache-bust-lazy-loading/issues"
+  },
+  "main": "Gruntfile.js",
+  "license": "ISC"
 }

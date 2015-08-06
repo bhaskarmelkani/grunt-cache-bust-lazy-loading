@@ -1,11 +1,4 @@
-# grunt-cache-bust
-
-[![npm version](https://badge.fury.io/js/grunt-cache-bust.svg)](http://badge.fury.io/js/grunt-cache-bust)
-[![Build Status](https://travis-ci.org/hollandben/grunt-cache-bust.png?branch=master)](https://travis-ci.org/hollandben/grunt-cache-bust)
-[![Dependencies](https://david-dm.org/hollandben/grunt-cache-bust.svg)](https://david-dm.org/hollandben/grunt-cache-bust.svg)
-[![devDependency Status](https://david-dm.org/alanshaw/david/dev-status.svg?style=flat)](https://david-dm.org/alanshaw/david#info=devDependencies)
-
-> Bust static assets from the cache using content hashing
+# grunt-cache-bust-lazy-loading
 
 * [Getting Started](#getting-started)
 * [Introduction](#the-cachebust-task)
@@ -21,7 +14,7 @@ _If you haven't used [grunt][] before, be sure to check out the [Getting Started
 From the same directory as your project's [Gruntfile][Getting Started] and [package.json][], install this plugin with the following command:
 
 ```bash
-npm install grunt-cache-bust --save-dev
+npm install grunt-cache-bust-lazy-loading --save-dev
 ```
 
 [grunt]: http://gruntjs.com/
@@ -151,7 +144,7 @@ Type: `Boolean`
 
 Default value: `false`
 
-When true, cachebust will search single and double-quoted strings in the given files for any resource ending in `#grunt-cache-bust`. See [an example](https://github.com/hollandben/grunt-cache-bust/blob/master/test/fixtures/enableUrlFragmentHint.php) for more details.
+When true, cachebust will search single and double-quoted strings in the given files for any resource ending in `#grunt-cache-bust-lazy-loading`. See [an example](https://github.com/hollandben/grunt-cache-bust-lazy-loading/blob/master/test/fixtures/enableUrlFragmentHint.php) for more details.
 
 #### options.encoding
 Type: `String`
@@ -171,7 +164,7 @@ Default value:
 ```
 
 The key in the object is the `selector`, and the value provided is the filter. Filters will be merged with the 
-defaults above. See [an example](https://github.com/hollandben/grunt-cache-bust/blob/master/tasks/cachebust.js#L39) for more details.
+defaults above. See [an example](https://github.com/hollandben/grunt-cache-bust-lazy-loading/blob/master/tasks/cachebust.js#L39) for more details.
 
 #### options.ignorePatterns
 Type: `Array`
@@ -191,7 +184,7 @@ Default value: `false`
 
 When set as `true`, `cachbust` will create a json file with an object inside that contains key value pairs of the original file name, and the renamed md5 hash name for each file.
 
-The default output file will be named `grunt-cache-bust.json` and is relative to the root of the project, or the `baseDir` option if set.
+The default output file will be named `grunt-cache-bust-lazy-loading.json` and is relative to the root of the project, or the `baseDir` option if set.
 
 Alternatively, you can set this option as a string i.e. `example-file-name.json`, and this will be used.
 
